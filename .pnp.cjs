@@ -30,16 +30,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.4.0"],\
+            ["@types/uuid", "npm:9.0.0"],\
             ["axios", "npm:1.3.2"],\
             ["cherio", "npm:1.0.0-rc.2"],\
+            ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["fast-check", "npm:3.6.2"],\
             ["helmet", "npm:6.0.1"],\
             ["jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.4.1"],\
             ["mongodb", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:5.0.0"],\
             ["nodemon", "npm:2.0.20"],\
             ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"],\
             ["ts-node", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"],\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1498,6 +1502,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/uuid", [\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.0-979023c16f-59ae56d954.zip/node_modules/@types/uuid/",\
+          "packageDependencies": [\
+            ["@types/uuid", "npm:9.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/webidl-conversions", [\
         ["npm:7.0.0", {\
           "packageLocation": "./.yarn/cache/@types-webidl-conversions-npm-7.0.0-0903313151-60142c7ddd.zip/node_modules/@types/webidl-conversions/",\
@@ -1670,16 +1683,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["api-trends", "workspace:."],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.4.0"],\
+            ["@types/uuid", "npm:9.0.0"],\
             ["axios", "npm:1.3.2"],\
             ["cherio", "npm:1.0.0-rc.2"],\
+            ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["fast-check", "npm:3.6.2"],\
             ["helmet", "npm:6.0.1"],\
             ["jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.4.1"],\
             ["mongodb", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:5.0.0"],\
             ["nodemon", "npm:2.0.20"],\
             ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"],\
             ["ts-node", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"],\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2613,6 +2630,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["dotenv", [\
+        ["npm:16.0.3", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.3-4cc29121dc-afcf03f373.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ee-first", [\
         ["npm:1.1.1", {\
           "packageLocation": "./.yarn/cache/ee-first-npm-1.1.1-33f8535b39-1b4cac778d.zip/node_modules/ee-first/",\
@@ -2841,6 +2867,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-is", "npm:1.6.18"],\
             ["utils-merge", "npm:1.0.1"],\
             ["vary", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["fast-check", [\
+        ["npm:3.6.2", {\
+          "packageLocation": "./.yarn/cache/fast-check-npm-3.6.2-6529dad521-9dac8c2720.zip/node_modules/fast-check/",\
+          "packageDependencies": [\
+            ["fast-check", "npm:3.6.2"],\
+            ["pure-rand", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4927,6 +4963,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["pure-rand", [\
+        ["npm:6.0.0", {\
+          "packageLocation": "./.yarn/cache/pure-rand-npm-6.0.0-17dd2810d1-ad1378d0a4.zip/node_modules/pure-rand/",\
+          "packageDependencies": [\
+            ["pure-rand", "npm:6.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["qs", [\
         ["npm:6.11.0", {\
           "packageLocation": "./.yarn/cache/qs-npm-6.11.0-caf1bc9dea-6e1f29dd53.zip/node_modules/qs/",\
@@ -5736,6 +5781,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/utils-merge-npm-1.0.1-363bbdfbca-c810954932.zip/node_modules/utils-merge/",\
           "packageDependencies": [\
             ["utils-merge", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["uuid", [\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-9.0.0-46c41e3e43-8dd2c83c43.zip/node_modules/uuid/",\
+          "packageDependencies": [\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
