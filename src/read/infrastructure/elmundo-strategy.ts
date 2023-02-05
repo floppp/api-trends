@@ -3,8 +3,8 @@ import cheerio from 'cheerio';
 import Feed from '../../core/domain/feed';
 import { FeedExtractStrategy } from './extractor.strategy';
 
-export default class ElPaisExtractStrategy extends FeedExtractStrategy {
-  constructor(url: string = 'https://www.elpais.com') {
+export default class ElMundoExtractStrategy extends FeedExtractStrategy {
+  constructor(url: string = 'https://www.elmundo.es/ultimas-noticias.html') {
     super(url);
   }
 
@@ -14,8 +14,8 @@ export default class ElPaisExtractStrategy extends FeedExtractStrategy {
       let $ = cheerio.load(html);
 
       $('article').map((_: number, element: any) => {
-        const header = $(element).find('h2.c_t').text();
-        const subHeader = $(element).find('p.c_d').text();
+        const header = $(element).find('.ue-c-cover-content__kicker').text();
+        const subHeader = $(element).find('.ue-c-cover-content__headline').text();
         const date = new Date(); // No date in new.
 
         feeds.push({header, subHeader, date})

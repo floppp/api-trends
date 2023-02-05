@@ -10,15 +10,15 @@ const log = ConsoleLogger.instance;
 
 log.logInfo(process.env.MONGO_URI ?? '')
 
-const dbName = 'api-feed';
-initMongoDB(dbName, process.env.MONGO_URI ?? '');
-const client = mongoClients[dbName];
-const db = client.db(dbName);
+// const dbName = 'api-feed';
+// initMongoDB(dbName, process.env.MONGO_URI ?? '');
+// const client = mongoClients[dbName];
+// const db = client.db(dbName);
 
-const port = process.env.PORT ? +process.env.PORT : 3000;
+const port = process.env.PORT_READ ? +process.env.PORT : 4001;
 const server = Server.instance;
-server.register(feedRouter(db));
+server.register(readRouter());
 
-server.start(port, () => log.logInfo('Server FEED running'));
+server.start(port, () => log.logInfo('Server READ running'));
 
 
