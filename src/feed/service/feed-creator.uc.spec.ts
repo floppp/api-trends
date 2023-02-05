@@ -1,7 +1,3 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
-import * as fc from 'fast-check';
-import Feed from '../domain/feed';
 import FeedRepository from '../domain/feed-repository';
 import FeedCreatorUc from './feed-creator.uc';
 

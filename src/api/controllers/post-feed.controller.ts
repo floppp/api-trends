@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import Controller from '../../core/controller';
 import { validateCreateFeedDto } from '../../feed/domain/create-feed.dto';
 import CreateFeedException from '../../feed/domain/create-feed.exception';

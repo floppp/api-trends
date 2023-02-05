@@ -33,6 +33,21 @@ describe('MongoFeedRepository', () => {
     expect(mock).toEqual({ header: feed.header, subHeader: feed.subHeader });
   });
 
+  it('we retrieve the number of elements saved', async () => {
+    await col.deleteMany({});
+    const mock = { header: 'header', subHeader: 'subheader' };
+    const mocks = Array(10).fill(mock);
+
+    for (const m of mocks) {
+      await repo.create(m)
+    }
+
+    const docs = await repo.findAll();
+
+    expect(docs.length).toBe(mocks.length);
+    expect(docs.length).not.toBe(0);
+  });
+
   afterAll(async () => {
     await client.close();
   })
