@@ -1,4 +1,5 @@
 import express, { Router, Request, Response, NextFunction } from 'express';
+import bodyParser = require('body-parser');
 import helmet from 'helmet';
 import ConsoleLogger from '../shared/loggers/console.logger';
 
@@ -12,6 +13,8 @@ export default class Server {
     log.logInfo('Running new server instance');
     this.app = express();
     this.app.use(helmet());
+    this.app.use(bodyParser.urlencoded({ extended: false }));
+    this.app.use(bodyParser.json());
   }
 
   register(...routers: Router[]): void {
@@ -25,7 +28,7 @@ export default class Server {
 
   start(port: number, cb: () => void): void {
     this.app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
-
+      log.logError(error.message);
       // Sending generic message to avoid leaking info.
       res.status(404).send({msg: 'Resource not found'});
     })

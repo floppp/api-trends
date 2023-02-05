@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import { Db } from 'mongodb';
 import MongoFeedRepository from '../../feed/infrastructure/mongo-feed.repository';
 import FeedCreatorUc from '../../feed/service/feed-creator.uc';
@@ -6,7 +6,7 @@ import PostFeedController from '../controllers/post-feed.controller';
 
 
 // TODO - passing di container as param.
-const feedRouter = (db: Db) => {
+const feedRouter = function(db: Db) {
   const router = Router();
   // --->>> to di
   const repo = new MongoFeedRepository(db);
@@ -14,7 +14,10 @@ const feedRouter = (db: Db) => {
   const postFeedController = new PostFeedController(uc);
   // <<<---
 
-  router.post('/api/v1/feed', postFeedController.exec);
+  router.post(
+    '/api/v1/feed',
+    async (req: Request, res: Response) => postFeedController.exec(req, res)
+  );
 
   return router;
 };

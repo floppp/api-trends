@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/body-parser", "npm:1.19.2"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/mongodb", "npm:4.0.7"],\
@@ -1683,6 +1684,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["api-trends", "workspace:."],\
+            ["@types/body-parser", "npm:1.19.2"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/mongodb", "npm:4.0.7"],\
