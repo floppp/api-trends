@@ -13,6 +13,8 @@ Se usa docker para lanzar la instancia de mongo. Directamente el comando, no *co
 
 En el código de conexión a Mongo reuso código que ya tenía de hace varios años. Posiblemente haya alguna forma de manejar la conexión (no creo que sea necesario, al menos no ahora, usar una clase para encapsularla).
 
+No eslint ni prettier. Para este proyecto con el formateador por defecto de typescript creo que será suficiente.
+
 ## Testing
 No creo uso TDD, al menos no siempre. os tests se ubicarán en la misma situación que los archivos que se testean con la convención *\*\*.spec.ts*. No me gusta personalmente generar otra carpeta *test* con la misma estructura *ala* JVM.
 
