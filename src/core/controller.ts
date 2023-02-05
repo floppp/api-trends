@@ -1,5 +1,5 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 export default interface Controller {
-  exec(req: Request, res: Response): Promise<void>;
+  exec(req: Request, res: Response, next: NextFunction): Promise<void>;
 }

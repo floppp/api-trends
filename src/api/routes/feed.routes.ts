@@ -1,4 +1,4 @@
-import { Router, Request, Response } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import { Db } from 'mongodb';
 import MongoFeedRepository from '../../feed/infrastructure/mongo-feed.repository';
 import FeedCreatorUc from '../../feed/service/feed-creator.uc';
@@ -16,7 +16,7 @@ const feedRouter = function(db: Db) {
 
   router.post(
     '/api/v1/feed',
-    async (req: Request, res: Response) => postFeedController.exec(req, res)
+    async (req: Request, res: Response, next: NextFunction) => postFeedController.exec(req, res, next)
   );
 
   return router;
