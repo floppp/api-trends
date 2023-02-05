@@ -30,7 +30,7 @@ export default class Server {
     this.app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
       log.logError(error.message);
       // Sending generic message to avoid leaking info.
-      res.status(404).send({msg: 'Resource not found'});
+      res.status(404).send({ msg: 'Resource not found' });
     })
     this.app.listen(port, cb);
   }
