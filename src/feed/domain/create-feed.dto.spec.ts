@@ -1,5 +1,6 @@
 import * as fc from 'fast-check';
-import CreateFeedDto, { validateCreateFeedDto } from './create-feed.dto';
+
+import { validateCreateFeedDto } from './create-feed.dto';
 import Feed from './feed';
 
 describe('CreateFeedDto', () => {
@@ -24,15 +25,6 @@ describe('CreateFeedDto', () => {
         (dto: any) => !validateCreateFeedDto(dto)
       )
     );
-  });
-
-  it('case failing ', () => {
-    expect(validateCreateFeedDto({"header":"","date":new Date("-025912-02-01T00:14:43.999Z"),"subHeader":""}))
-      .toBe(true);
-    // expect(
-      // validateCreateFeedDto({"header":"","date":new Date("2138-05-12T22:00:00.000Z"),"subHeader":""})
-    // )
-      // .toBe(true);
   });
 
   it('validation works for dates as string', () => {

@@ -28,8 +28,9 @@ Explicación de los paquetes no tan evidentes
  - [ts-jest](https://kulshekhar.github.io/ts-jest/) configuración ts con jest
  - [cherio](https://cheerio.js.org/) webscrapping
  - [dotenv](https://github.com/motdotla/dotenv) para manejar .env
- - [fast-check](https://github.com/dubzzz/fast-check) para hacer *property based testing*. Me parece algo muy interesante y, al menos por lo que yo veo/comento con compañeros/ex-compañeros, algo demasiado poco usado.
- - [uuid]() para generación de ids del modelo *feed*.
+ - [fast-check](https://github.com/dubzzz/fast-check) para hacer *Property Based Testing*. Me parece algo muy interesante y, al menos por lo que yo veo/comento con compañeros/ex-compañeros, algo demasiado poco usado.
+ - [uuid]() para generación de id's del modelo *feed*.
 
 # Referencias
  - [porqué ts-jest](https://jestjs.io/docs/getting-started#via-ts-jest)
+ - [isNaN al parsear fecha](https://stackoverflow.com/a/10589791)
