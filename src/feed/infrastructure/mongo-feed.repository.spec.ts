@@ -25,19 +25,7 @@ describe('MongoFeedRepository', () => {
     repo = new MongoFeedRepository(db);
   })
 
-  // Fast-check for generation
   it('create stores a new feed in database', async () => {
-    fc.record({
-      header: fc.string(),
-      date: fc.date(),
-      subHeader: fc.string()
-    }).map(async (dto: Partial<Feed>) => {
-      const { id } = await repo.create(dto);
-      const feed = await col.findOne({ _id: new ObjectId(id)});
-
-      expect(dto).toEqual({ header: feed.header, subHeader: feed.subHeader });
-    })
-
     const mock = { header: 'header', subHeader: 'subheader' };
     const { id } = await repo.create(mock);
     const feed = await col.findOne({ _id: new ObjectId(id)});
