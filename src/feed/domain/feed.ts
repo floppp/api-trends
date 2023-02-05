@@ -1,6 +1,6 @@
 export default interface Feed {
   id: string; // TODO: Change to type from @types/uuid
-  title: string;
+  header: string;
   date: Date;
   subHeader: string;
 }
