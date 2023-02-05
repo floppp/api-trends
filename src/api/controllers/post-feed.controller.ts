@@ -10,7 +10,7 @@ export default class PostFeedController implements Controller {
 
   async exec(req: Request, res: Response): Promise<Id> {
     const body = req.body;
-
+    console.log(body);
     if (!validateCreateFeedDto(body))
       throw new CreateFeedException('Body request has wrong attributes');
 

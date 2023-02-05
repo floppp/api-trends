@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongodb", "npm:4.0.7"],\
             ["@types/node", "npm:18.11.19"],\
             ["axios", "npm:1.3.2"],\
+            ["body-parser", "npm:1.20.1"],\
             ["cherio", "npm:1.0.0-rc.2"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
@@ -1687,6 +1688,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongodb", "npm:4.0.7"],\
             ["@types/node", "npm:18.11.19"],\
             ["axios", "npm:1.3.2"],\
+            ["body-parser", "npm:1.20.1"],\
             ["cherio", "npm:1.0.0-rc.2"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\

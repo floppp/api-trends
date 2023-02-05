@@ -1,4 +1,5 @@
-import express, { Router } from 'express';
+import express, { Router, Request, Response, NextFunction } from 'express';
+import helmet from 'helmet';
 import ConsoleLogger from '../shared/loggers/console.logger';
 
 const log = ConsoleLogger.instance;
@@ -10,10 +11,12 @@ export default class Server {
   private constructor() {
     log.logInfo('Running new server instance');
     this.app = express();
+    this.app.use(helmet());
   }
 
-  register(router: Router): void {
-    this.app.use(router);
+  register(...routers: Router[]): void {
+    for (const router of routers)
+      this.app.use(router);
   }
 
   static get instance(): Server {
@@ -21,6 +24,11 @@ export default class Server {
   }
 
   start(port: number, cb: () => void): void {
+    this.app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
+
+      // Sending generic message to avoid leaking info.
+      res.status(404).send({msg: 'Resource not found'});
+    })
     this.app.listen(port, cb);
   }
 }
