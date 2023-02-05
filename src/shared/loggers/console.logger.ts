@@ -4,6 +4,10 @@ import Logger from './logger';
 export default class ConsoleLogger extends Logger {
   private static __instance: Logger;
 
+  private constructor() {
+    super();
+  }
+
   static get instance(): Logger {
     return this.__instance || (this.__instance = new this());
   }
