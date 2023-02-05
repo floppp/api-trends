@@ -1,8 +1,9 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 import * as fc from 'fast-check';
-import { MongoClient } from 'mongodb';
+import { ObjectId, MongoClient } from 'mongodb';
 import { initMongoDB, mongoClients } from '../../core/infrastructure/mongo-connection';
+import Feed from '../domain/feed';
 import MongoFeedRepository from './mongo-feed.repository';
 
 describe('MongoFeedRepository', () => {
@@ -10,6 +11,7 @@ describe('MongoFeedRepository', () => {
   let client!: MongoClient;
   let db!: any;
   let col!: any;
+  let repo!: MongoFeedRepository;
 
   beforeAll(async () => {
     initMongoDB(dbName, process.env.MONGO_URI ?? '');
@@ -19,34 +21,28 @@ describe('MongoFeedRepository', () => {
     await col.deleteMany({});
   });
 
-  it('if a document is inserted must be retrieved with same id', async () => {
-    fc.assert(
-      fc.property(
-        fc.record({
-          header: fc.integer(),
-          date: fc.date(),
-          subHeader: fc.string()
-        }),
-        (dto: any) => {
-          col.insertOne(dto)
-            .then((_id: any) => {
-              col.findOne({ _id })
-                .then((feed: any) => {
-                  expect(feed).toEqual(dto);
-                })
-            })
-        }
-      ));
+  beforeEach(() => {
+    repo = new MongoFeedRepository(db);
+  })
 
-  });
-
+  // Fast-check for generation
   it('create stores a new feed in database', async () => {
-    const sut = new MongoFeedRepository();
-    const col = await db.collection(sut.colName);
-    const feeds = col.find({});
-    await feeds.forEach(console.log)
-    // wait client.db(dbName).command({ ping: 1 });
-    // console.log("Connected successfully to server");
+    fc.record({
+      header: fc.string(),
+      date: fc.date(),
+      subHeader: fc.string()
+    }).map(async (dto: Partial<Feed>) => {
+      const { id } = await repo.create(dto);
+      const feed = await col.findOne({ _id: new ObjectId(id)});
+
+      expect(dto).toEqual({ header: feed.header, subHeader: feed.subHeader });
+    })
+
+    const mock = { header: 'header', subHeader: 'subheader' };
+    const { id } = await repo.create(mock);
+    const feed = await col.findOne({ _id: new ObjectId(id)});
+
+    expect(mock).toEqual({ header: feed.header, subHeader: feed.subHeader });
   });
 
   afterAll(async () => {

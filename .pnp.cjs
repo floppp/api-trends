@@ -32,7 +32,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.4.0"],\
             ["@types/mongodb", "npm:4.0.7"],\
             ["@types/node", "npm:18.11.19"],\
-            ["@types/uuid", "npm:9.0.0"],\
             ["axios", "npm:1.3.2"],\
             ["cherio", "npm:1.0.0-rc.2"],\
             ["dotenv", "npm:16.0.3"],\
@@ -44,8 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:2.0.20"],\
             ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"],\
             ["ts-node", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"],\
-            ["uuid", "npm:9.0.0"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1514,15 +1512,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/uuid", [\
-        ["npm:9.0.0", {\
-          "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.0-979023c16f-59ae56d954.zip/node_modules/@types/uuid/",\
-          "packageDependencies": [\
-            ["@types/uuid", "npm:9.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@types/webidl-conversions", [\
         ["npm:7.0.0", {\
           "packageLocation": "./.yarn/cache/@types-webidl-conversions-npm-7.0.0-0903313151-60142c7ddd.zip/node_modules/@types/webidl-conversions/",\
@@ -1697,7 +1686,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.4.0"],\
             ["@types/mongodb", "npm:4.0.7"],\
             ["@types/node", "npm:18.11.19"],\
-            ["@types/uuid", "npm:9.0.0"],\
             ["axios", "npm:1.3.2"],\
             ["cherio", "npm:1.0.0-rc.2"],\
             ["dotenv", "npm:16.0.3"],\
@@ -1709,8 +1697,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:2.0.20"],\
             ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"],\
             ["ts-node", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"],\
-            ["uuid", "npm:9.0.0"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5795,15 +5782,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/utils-merge-npm-1.0.1-363bbdfbca-c810954932.zip/node_modules/utils-merge/",\
           "packageDependencies": [\
             ["utils-merge", "npm:1.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["uuid", [\
-        ["npm:9.0.0", {\
-          "packageLocation": "./.yarn/cache/uuid-npm-9.0.0-46c41e3e43-8dd2c83c43.zip/node_modules/uuid/",\
-          "packageDependencies": [\
-            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\

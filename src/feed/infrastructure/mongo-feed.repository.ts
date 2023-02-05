@@ -1,13 +1,25 @@
-import CreateFeedDto from "../domain/create-feed.dto";
+import { Db } from 'mongodb';
 import Feed from "../domain/feed";
 import FeedRepository from "../domain/feed-repository";
 
 export default class MongoFeedRepository extends FeedRepository {
+  constructor(private readonly db: Db) {
+    super();
+  }
+
   get colName() {
     return this.collection;
   }
 
-  async create(dto: Partial<Feed>):  Promise<{ id: string, n: number }> {
-    return Promise.resolve({ id: 'id', n: 1 });
+  async mongoCollection() {
+    return this.db.collection(this.collection);
+  }
+
+  async create(dto: Partial<Feed>):  Promise<{ id: string }> {
+    const col = await this.mongoCollection();
+    // If not driver modifies object passed and tests will fail.
+    const { insertedId } = await col.insertOne({ ...dto });
+
+    return { id: insertedId.toString() };
   }
 }
