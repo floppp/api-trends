@@ -35,7 +35,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.2"],\
             ["helmet", "npm:6.0.1"],\
             ["jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.4.1"],\
-            ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"]\
+            ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1578,7 +1579,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.2"],\
             ["helmet", "npm:6.0.1"],\
             ["jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.4.1"],\
-            ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"]\
+            ["ts-jest", "virtual:fde078702b4ea8ce2b2d0afb5e1fd397c4047958131fd6b5c55ab0c2bdecd78d248d1c7ebc0c31faad58db814a2202b266adfe15f042444beb0482e6956eb97d#npm:29.0.5"],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5152,7 +5154,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.memoize", "npm:4.1.2"],\
             ["make-error", "npm:1.3.6"],\
             ["semver", "npm:7.3.8"],\
-            ["typescript", null],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"],\
             ["yargs-parser", "npm:21.1.1"]\
           ],\
           "packagePeers": [\
@@ -5197,6 +5199,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-is", "npm:1.6.18"],\
             ["media-typer", "npm:0.3.0"],\
             ["mime-types", "npm:2.1.35"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["typescript", [\
+        ["patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-2f73799a60-8f6260acc8.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
           ],\
           "linkType": "HARD"\
         }]\
