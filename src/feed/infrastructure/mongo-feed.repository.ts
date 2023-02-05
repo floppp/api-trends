@@ -1,6 +1,6 @@
 import { Db } from 'mongodb';
 import { Id } from '../../core/domain/model';
-import Feed, { FeedDocument } from "../domain/feed";
+import Feed, { FeedDocument } from "../../core/domain/feed";
 import FeedRepository from "../domain/feed-repository";
 
 export default class MongoFeedRepository extends FeedRepository {

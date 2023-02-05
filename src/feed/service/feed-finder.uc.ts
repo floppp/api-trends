@@ -1,4 +1,4 @@
-import Feed from "../domain/feed";
+import Feed from "../../core/domain/feed";
 import FeedRepository from "../domain/feed-repository";
 
 export default class FeedFindAllUc {

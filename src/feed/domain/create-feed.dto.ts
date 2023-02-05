@@ -1,4 +1,4 @@
-import Feed from "./feed";
+import Feed from "../../core/domain/feed";
 
 type CreateFeedDto = Omit<Feed, 'id' | 'date'> & { date: string };
 

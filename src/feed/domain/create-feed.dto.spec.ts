@@ -1,7 +1,7 @@
 import * as fc from 'fast-check';
 
 import { validateCreateFeedDto } from './create-feed.dto';
-import Feed from './feed';
+import Feed from '../../core/domain/feed';
 
 describe('CreateFeedDto', () => {
   // Because how dates works in typescript is hard to manage the date so I won't test in case of date not being a date.

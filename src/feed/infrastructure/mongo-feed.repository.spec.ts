@@ -3,7 +3,7 @@ dotenv.config();
 import * as fc from 'fast-check';
 import { ObjectId, MongoClient } from 'mongodb';
 import { initMongoDB, mongoClients } from '../../core/infrastructure/mongo-connection';
-import Feed from '../domain/feed';
+import Feed from '../../core/domain/feed';
 import MongoFeedRepository from './mongo-feed.repository';
 
 describe('MongoFeedRepository', () => {

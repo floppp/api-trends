@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import * as fc from 'fast-check';
-import Feed from '../../feed/domain/feed';
+import Feed from '../../core/domain/feed';
 import FeedRepository from '../../feed/domain/feed-repository';
 import FeedCreatorUc from '../../feed/service/feed-creator.uc';
 import PostFeedController from './post-feed.controller';
