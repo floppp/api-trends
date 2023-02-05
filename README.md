@@ -1,4 +1,5 @@
 # API-trends
+Para lanzar la aplicación en modo dev, no uso directamente un script definido en *package.json*, sino que lanzo con =npx nodemon src/main_feed.ts=.
 Se intentará usar las menos librerías posibles dentro de lo razonable.
 Los tests se ubicarán en la misma situación que los archivos que se testean con la convención *\*\*.spec.ts*. No me gusta personalmente generar otra carpeta *test* con la misma estructura *ala* JVM.
 
